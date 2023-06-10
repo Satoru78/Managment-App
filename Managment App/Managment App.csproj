@@ -34,6 +34,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Восьмерка.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -55,6 +58,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Views\Windows\Authorization.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Windows\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -62,6 +69,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\Windows\Authorization.xaml.cs">
+      <DependentUpon>Authorization.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Windows\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -97,8 +107,28 @@
   <ItemGroup>
     <Folder Include="Context\" />
     <Folder Include="Model\" />
-    <Folder Include="Resource\" />
     <Folder Include="Views\Pages\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\Восьмерка.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Восьмерка.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\authManagBack.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\mainManagBack.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\backPink.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Восьмерка.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\backk.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
