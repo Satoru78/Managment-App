@@ -128,7 +128,7 @@
     <Resource Include="Восьмерка.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resource\backk.png" />
+    <Resource Include="Resource\logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
