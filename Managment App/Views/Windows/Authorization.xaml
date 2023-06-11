@@ -12,15 +12,15 @@
         MouseDown="Window_MouseDown"
         AllowsTransparency="True"
         Background="Transparent"
-        Height="450" Width="800">
-    <Border CornerRadius="20">
+        Height="500" Width="800">
+    <Border CornerRadius="25">
         <Border.Background>
             <ImageBrush ImageSource="/Resource/authManagBack.jpg"
                         ></ImageBrush>
             
         </Border.Background>
     <Border 
-            CornerRadius="20"
+            CornerRadius="25"
             BorderThickness="3"
         Opacity="0.7">
             <Border.BorderBrush>
@@ -50,7 +50,8 @@
                                Grid.Column="0"
                                FontFamily="Montserrat"
                                VerticalAlignment="Center"
-                               Margin="20 0 0 0"></TextBlock>
+                               FontWeight="Bold"
+                               Margin="15 0 0 0"></TextBlock>
 
                     <Button Name="btnMinimized"
                             Background="Transparent"
@@ -58,10 +59,11 @@
                             Content="-"
                             FontSize="26"
                             FontFamily="Montserrat"
+                            FontWeight="Bold"                           
                             Cursor="Hand"
                             Foreground="White"
                             Grid.Column="1"
-                            Margin="0,0,10,0"
+                            Margin="0,-2,10,2"
                             Click="btnMinimized_Click">
                         <Button.Template>
                             <ControlTemplate TargetType="Button">
@@ -80,6 +82,7 @@
                             Background="Transparent"
                             BorderThickness="0"
                             Content="X"
+                            FontWeight="Bold"
                             FontSize="16"
                             FontFamily="Montserrat"
                             Cursor="Hand"
@@ -99,12 +102,99 @@
                         </Button.Template>
                     </Button>
                 </Grid>
+                
                 <StackPanel Width="280"
                             Grid.Row="2"
                             Orientation="Vertical"
-                            Margin="0 35 0 0">
+                            Margin="0 20 0 0">
                     <Image Source="/Resource/backk.png"
-                           Width="150" Height="150" />
+                           Width="120" Height="120" />
+
+                    <TextBlock Text="Vosmerka"
+                               Foreground="White"
+                               FontSize="25"
+                               FontWeight="Medium"
+                               HorizontalAlignment="Center" 
+                               FontFamily="Nirmala UI"/>
+
+                    <TextBlock Text="Компания  по  производству  качественных  шин  для  легковых  автомобилей. "
+                               Foreground="LightGray"
+                               FontSize="12"
+                               FontWeight="Medium"
+                               TextWrapping="Wrap"
+                               FontFamily="Nirmala UI"
+                               TextAlignment="Center"
+                               Margin="0 5 0 0"/>
+
+                    <TextBlock Text="Имя пользователя"
+                               Foreground="DarkGray"
+                               FontSize="12"
+                               FontWeight="Medium"
+                               FontFamily="Nirmala UI"
+                               Margin="0 35 0 0"/>
+
+                    
+                    <TextBox Name="txbLogin"
+                             FontSize="13"
+                             FontWeight="Medium"
+                             Background="Transparent"
+                             Foreground="White"
+                             BorderBrush="DarkGray"
+                             CaretBrush="LightGray"
+                             Height="28"
+                             VerticalContentAlignment="Center"
+                             BorderThickness="0 0 0 1"
+                             Margin="0 5 0 0">
+                         
+                    </TextBox>
+
+                    <TextBlock Text="Пароль"
+                               Foreground="DarkGray"
+                               FontSize="12"
+                               FontWeight="Medium"
+                               FontFamily="Nirmala UI"
+                               Margin="0 15 0 0"/>
+
+
+                    <TextBox Name="txbPas"
+                             FontSize="13"
+                             FontWeight="Medium"
+                             Background="Transparent"
+                             Foreground="White"
+                             BorderBrush="DarkGray"
+                             CaretBrush="LightGray"
+                             Height="28"
+                             VerticalContentAlignment="Center"
+                             BorderThickness="0 0 0 1"
+                             Margin="0 5 0 0">
+
+                    </TextBox>
+
+                    <Button Name="btnLogin"
+                            Background="#FF9B1F81"
+                            BorderThickness="0"
+                            Content="ВОЙТИ"
+                            FontWeight="Bold"
+                            FontSize="12"
+                            FontFamily="Montserrat"
+                            Cursor="Hand"
+                            Foreground="White"
+                            Grid.Column="2"
+                            Margin="0,20,0,0"
+                            Click="btnLogin_Click">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Width="150" Height="40"
+                                        CornerRadius="20"
+                                        Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center"
+                                                      VerticalAlignment="Center"></ContentPresenter>
+                                </Border>
+
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+
                 </StackPanel>
             </Grid>
         </Border>

@@ -41,5 +41,10 @@ namespace Managment_App.Views.Windows
         {
             WindowState = WindowState.Minimized;
         }
+
+        private void btnLogin_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
